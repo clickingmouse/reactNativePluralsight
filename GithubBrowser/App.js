@@ -3,7 +3,7 @@
  * https://github.com/facebook/react-native
  * @flow
  */
-
+//var Login=require('./login.js');
 import React, { Component } from 'react';
 import {
   Platform,
@@ -11,6 +11,8 @@ import {
   Text,
   View
 } from 'react-native';
+
+import Login from './login.js'
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -22,17 +24,20 @@ const instructions = Platform.select({
 type Props = {};
 export default class App extends Component<Props> {
   render() {
+    var message='HELLO ~ HELLO  ~ ~ !!'
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native!
+          {message}
         </Text>
         <Text style={styles.instructions}>
           To get started, edit App.js
         </Text>
         <Text style={styles.instructions}>
           {instructions}
+
         </Text>
+<Login />
       </View>
     );
   }
